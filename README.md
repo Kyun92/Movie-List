@@ -1,44 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Movie list**
 
-## Available Scripts
+프론트의 덕목인 `List` 화면 처리 연습을 위한 흔하디 흔한 영화 리스트 및 검색 기능 구현
 
-In the project directory, you can run:
+## **Stack**
 
-### `yarn start`
+- React
+- Typescript
+- Hooks
+- Styled-components
+- Axios
+- Redux
+- Redux-saga
+- React-router
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## **Todo**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- 반응형 디자인
+- 무비 리스트 조회에 로딩 UI화면
+  - 스켈레톤 UI 적용
+- Error Page
+- 스크롤 로딩 (scroll pagenation)
+- 필터 기능
+  - `date`, `rank` 로 필터
+  - `range-slide` UI 로 제작, `debounce` 방식으로 구현
+  - `query` 담기
+- 최근 본 영화 담기
+  - 5개까지 추가되며, 5개가 넘어갈 경우 가장 오래전에 추가된 요소를 삭제
+- `Home`, `List`, `Detail` 화면 구현
 
-### `yarn test`
+## **API**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[http://yify.is/api](http://yify.is/api) 영화 API 사용
