@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import MovieHome from './components/home/MovieHome';
+import MovieHome from './components/MovieHome';
 import MovieList from './components/MovieList';
 import MovieDetail from './components/MovieDetail';
 
