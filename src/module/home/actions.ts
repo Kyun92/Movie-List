@@ -1,9 +1,9 @@
-import { AxiosError } from "axios";
-import { MoviesType } from "../MovieType";
+import { AxiosError } from 'axios';
+import { MoviesType } from '../MovieType';
 
-export const HOME_REQUEST = "home/HOME_REQUEST" as const;
-export const HOME_SUCCESS = "home/HOME_SUCCESS" as const;
-export const HOME_FAILURE = "home/HOME_FAILURE" as const;
+export const HOME_REQUEST = 'home/HOME_REQUEST' as const;
+export const HOME_SUCCESS = 'home/HOME_SUCCESS' as const;
+export const HOME_FAILURE = 'home/HOME_FAILURE' as const;
 
 export const homeRequest = () => ({ type: HOME_REQUEST });
 export const homeSuccess = (movies: MoviesType) => ({

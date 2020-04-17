@@ -3,7 +3,6 @@ import { MoviesType, MovieType } from '../module/MovieType';
 export const randomImgExtraction = (movies: MoviesType) => {
   const { results } = movies;
   const randomList: number[] = randomNum();
-
   const homeTitle = [
     '무슨 영화를 볼지 고민이세요?',
     '밤을 채워줄 영화를 찾으시나요?',
