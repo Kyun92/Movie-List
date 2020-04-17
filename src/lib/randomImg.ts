@@ -32,7 +32,7 @@ function randomNum(): number[] {
   const nums: number[] = [];
   function makeNum() {
     if (nums.length < 3) {
-      let n = Math.floor(Math.random() * 20) + 1;
+      let n = Math.floor(Math.random() * 20);
       if (notSame(n)) {
         nums.push(n);
       }
