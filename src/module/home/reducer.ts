@@ -16,6 +16,7 @@ type ImgUrl = {
   id: number;
   imgUrl: string;
   title: string;
+  homeTitle: string;
 };
 
 const initialState: HomeState = {

@@ -18,13 +18,16 @@ function MovieHome() {
   }, []);
 
   if (loading) return <div>Loading..</div>;
+  if (error) return <div>error</div>;
 
   return (
     <HomeWrapper>
-      {imgUrlList?.map((moive) => (
-        <HomeImageBlock key={moive.id} imgUrl={moive.imgUrl}>
-          <h4>무슨 영화를 볼지 고민이세요?</h4>
-          <Button to="/list">시작하기</Button>
+      {imgUrlList?.map((movie) => (
+        <HomeImageBlock key={movie.id} imgUrl={movie.imgUrl}>
+          <div className="home-title">
+            <h4>{movie.homeTitle}</h4>
+            <Button to="/list">시작하기</Button>
+          </div>
         </HomeImageBlock>
       ))}
     </HomeWrapper>
@@ -45,11 +48,18 @@ const HomeImageBlock = styled.div<{ imgUrl: string }>`
   background-position: center;
   background-size: cover;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
   h4 {
     font-size: 5rem;
+  }
+  .home-title {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 `;
