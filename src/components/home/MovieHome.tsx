@@ -1,25 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Button from './common/Button';
-import { homeRequest } from '../module/home';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootReducerType } from '../module';
+import Button from '../common/Button';
+import { ImgUrl } from '../../module/home/reducer';
 
-function MovieHome() {
-  const dispatch = useDispatch();
-  const home = useSelector((state: RootReducerType) => state.home);
-  const { loading, imgUrlList, error } = home;
-  useEffect(() => {
-    dispatch(homeRequest());
-  }, [dispatch]);
+type HomePropsType = {
+  imgUrlList: ImgUrl[] | null;
+};
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  if (loading) return <div>Loading..</div>;
-  if (error) return <div>error</div>;
-
+function MovieHome({ imgUrlList }: HomePropsType) {
   return (
     <HomeWrapper>
       {imgUrlList?.map((movie) => (

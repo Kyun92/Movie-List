@@ -12,7 +12,7 @@ type HomeState = {
   imgUrlList: ImgUrl[] | null;
   error: AxiosError | null;
 };
-type ImgUrl = {
+export type ImgUrl = {
   id: number;
   imgUrl: string;
   title: string;
